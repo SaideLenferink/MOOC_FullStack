@@ -1,0 +1,27 @@
+sequenceDiagram
+participant user
+participant browser
+participant server
+
+    user->>browser: The user writes a new note in the text field and presses "Save"
+    Note right of user: The new note is contained in a form element in the browser
+
+    browser->>server: HTTP POST request to /new_note
+    Note right of browser: The new note is added to the data.json file
+    server->>browser: response code 302 (URL redirect) is send back
+
+    Note right of browser: This triggers the reloading of the Notes page
+    browser->>server: GET notes
+    server->>browser: send HTML response of the notes page
+    Note right of browser: The HTML references to the stylesheet in main.css
+    Note right of browser: The HTML references to the javascript in main.js
+    browser->>server: GET main.css
+    browser->>server: GET main.js
+    server->>browser: send main.css containing the stylesheet
+    server->>browser: send main.js containing the page logic
+    Note right of browser: The main.js contains references to the data
+    browser->>server: GET data.json
+    server->>browser: send data.json
+    Note right of browser: updated data with the new note
+
+    browser->>user: Show the refreshed page containing the new note

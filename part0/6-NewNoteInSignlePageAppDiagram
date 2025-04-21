@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant user
+    participant browser
+    participant server
+
+    user->>browser: The user writes a new note in the text field and presses "Save" 
+    Note right of user: The new note is contained in a form element in the browser
+    
+    browser->>server: HTTP POST request to /new_note_spa containing a json of the new note
+    Note right of browser: The .json file of the new note is added to the data.json file
+    server->>browser: response code 201 (note created) is send back
+    
+    browser->>user: Show the page containing the new note
