@@ -1,0 +1,73 @@
+
+h1 {
+  color: green;
+  font-style: italic;
+}
+
+h2 {
+  color: #333333;
+  font-style: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    font-size: 15px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 10px;
+    font-size: 15px;
+}
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: darkcyan;
+    border: none;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.note {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: lower-roman;
+    padding-top: 3px;
+    font-size: 15px;
+    padding-inline: 10px;
+    inline-size: auto;
+}
+
+
+.error {
+    color: red;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3px;
+    font-size: 12px;
+    border: 1px solid red
+}
+
+.confirmation {
+    color: green;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3px;
+    font-size: 12px;
+    border: 1px solid green
+}
